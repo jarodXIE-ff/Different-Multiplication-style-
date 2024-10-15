@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html">
+    <hr>
+    <h1 id="xie-jarod-28710097">XIE JAROD 28710097</h1>
+    <h2 id="model-project-for-sorbonne-university-20232024">MODEL PROJECT FOR SORBONNE UNIVERSITY 2023/2024</h2>
+    <h1 id="polynomial-multiplication-with-fft">Polynomial Multiplication with FFT</h1>
+    <h2 id="overview">Overview</h2>
+    <p>This project implements polynomial multiplication using the Fast Fourier Transform (FFT) algorithm in C. The
+      algorithm leverages the FFT to efficiently compute the product of two polynomials.</p>
+    <h2 id="table-of-contents">Table of Contents</h2>
+    <ul>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#dependencies">Dependencies</a></li>
+      <li><a href="#building">Building</a></li>
+      <li><a href="#example">Example</a></li>
+    </ul>
+    <h2 id="usage">Usage</h2>
+    <p>To use this project, follow the steps below:</p>
+    <ol>
+      <li>Open the folder in any system that can run C.</li>
+      <li>Type <code>make</code> in the terminal to build the project.</li>
+      <li>Run the executable: <code>./FFT_poly</code> for a quick example.</li>
+      <li>Run the executable: <code>./FFT_poly n</code> (with <code>n</code> being the size of the two polynomials to
+        multiply).
+        <ul>
+          <li>The program will generate two random polynomials of degree <code>n-1</code> and compute their product,
+            recording the time in <code>Time_FFT_MULT.txt</code>.</li>
+        </ul>
+      </li>
+      <li>Run the executable: <code>./naive_poly n</code> to multiply two random polynomials of degree <code>n-1</code>
+        with the naive algorithm, recording the time in <code>Time_NAIVE_MULT.txt</code>.</li>
+      <li>Type: <code>python graph.py</code> to create a graph from your tests of <code>FFT_poly</code> and
+        <code>naive_poly</code>. You can see the graph in the folder "Graph of time", it only keep the last one you
+        create
+      </li>
+      <li>For simple use you can run this on your terminal to multiply 2 polynomial of size 1 to
+        10000
+        <ul>
+          <li><code>for i in {1..10000};do ./FFT_poly $i; done</code>
+        </ul>
+        <ul>
+          <li><code>for i in {1..10000};do ./naive_poly $i; done</code>
+        </ul>
+      </li>
+      </li>
+      <li>WARNING : Pc might crash for size after 10 000 for the naive_poly.c and after 1 000 000 for the FFT_poly </li>
+    </ol>
+    <h2 id="dependencies">Dependencies</h2>
+    <p>This project has the following dependencies:</p>
+    <ul>
+      <li>C Standard Library</li>
+      <li><code>Complex.h</code> from the folder</li>
+    </ul>
+    <h2 id="building">Building</h2>
+    <p>To build the project, use the provided Makefile. Simply run:</p>
+    <pre class=" language-bash"><code class="prism  language-bash"><span class="token function">make</span>
+</code></pre>
+    <p>This will compile the source code and generate the executable.</p>
+    <h2 id="example">Example</h2>
+    <p>An example of how to use the polynomial multiplication function is provided in the <code>FFT_poly.c</code> file.
+      You can run the example after building the project.</p>
+    <pre class=" language-bash"><code class="prism  language-bash">./FFT_poly 10
+</code></pre>
+    <hr>
+  </div>
+</body>
+
+</html>
